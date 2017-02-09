@@ -18,6 +18,24 @@ body{
     height: 5em;
 }
 .column div:first-child{
-    background: lightgrey;
-    border: 2px solid white;
+    /*background: lightgrey;*/
+    /*border: 2px solid white;*/
+}
+table {
+    border: 2px solid black;
+}
+.red {
+    /*border: 2px solid blue;*/
+    background-color: red;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+.yellow {
+    /*border: 2px solid blue;*/
+    background-color: yellow;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+
 }
