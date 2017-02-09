@@ -1,0 +1,23 @@
+body{
+    width: 50%;
+    margin: auto;
+}
+#board{
+    display: flex;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+.case{
+    border: 2px solid blue;
+    background-color: white;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+.column div:first-child{
+    background: lightgrey;
+    border: 2px solid white;
+}
