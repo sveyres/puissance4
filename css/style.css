@@ -4,11 +4,16 @@ body{
 }
 #board{
     display: flex;
+
 }
 .column{
     display: flex;
     flex-direction: column;
     background-color: blue;
+}
+
+.column div:first-child{
+    border-radius: 0;
 }
 .case{
     border: 2px solid blue;
@@ -17,9 +22,12 @@ body{
     width: 5em;
     height: 5em;
 }
-.column div:first-child{
-    /*background: lightgrey;*/
-    /*border: 2px solid white;*/
+.truc{
+    border: 2px solid blue;
+    background-color: lightgrey;
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
 }
 table {
     border: 2px solid black;

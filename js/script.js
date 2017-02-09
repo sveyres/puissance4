@@ -8,45 +8,41 @@ var grid = [["","","","","",""],
             ["","","","","",""],
             ["","","","","",""],
             ["","","","","",""],
-            ["","","","","",""],
             ["R","R","Y","Y","",""]];
 
 for (var j = 0; j < 7; j++) {
+// LES COLONNES
     var columnElement = document.createElement("div");
     columnElement.className = "column";
     boardElement.appendChild(columnElement);
-    for (var i = 0; i < 7; i++) {
-
+    var clicElement = document.createElement("div");
+    clicElement.className = "truc";
+    clicElement.id = j;
+    columnElement.appendChild(clicElement);
+    for (var i = 0; i < 6; i++) {
+// LES LIGNES
         var caseElement = document.createElement("div");
         caseElement.className = "case";
         columnElement.appendChild(caseElement);
         // caseElement.style.display = "block";
 
-        if(grid[i][j] == "R") {
-            caseElement.className ="red"
-        }
-        else if(grid[i][j] == "Y"){
-            caseElement.className ="yellow"
-        }
-            // caseElement.addEventListener ("click", function(){
-            //     this.className = "red";
-            // })
-        //
-        //     var redCaseElement = document.createElement ("div");
-        //     caseElement.className = "red";
-        //     caseElement.appendChild(redCaseElement);
-        //     redCaseElement.style.display = "none";
-        //
-        //     var yellowCaseElement = document.createElement ("div");
-        //     caseElement.className ="yellow";
-        //     caseElement.appendChild(yellowCaseElement);
-        //     yellowCaseElement.style.display = "none";
-        //
-        //
-        //         if (
-        // grid [0][0]="red") {
-        //     redCaseElement
-        // }
+
+
+        clicElement.addEventListener ("click", function(){
+            for (var k = grid.length-1; k > 0; k--) {
+                if(grid[k][this.id]==""){
+                    caseElement.className ="red";
+                }
+
+                // if(grid[i][j] == "R") {
+                //     caseElement.className ="red";
+                // }
+                // else if(grid[i][j] == "Y"){
+                //     caseElement.className ="yellow";
+                // }
+            }
+
+        });
 
     }
 }
