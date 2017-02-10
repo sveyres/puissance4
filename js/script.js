@@ -1,14 +1,12 @@
 var boardElement = document.getElementById("board");
-
-
 var gridElement = document.createElement("table");
-
 var grid = [["","","","","",""],
             ["","","","","",""],
             ["","","","","",""],
             ["","","","","",""],
             ["","","","","",""],
-            ["R","R","Y","Y","",""]];
+            ["","","","","",""],
+            ["","","","","",""]];
 
 for (var j = 0; j < 7; j++) {
 // LES COLONNES
@@ -25,15 +23,25 @@ for (var j = 0; j < 7; j++) {
         caseElement.className = "case";
         caseElement.id = "case"+i+"-"+j;
         columnElement.appendChild(caseElement);
-        // caseElement.style.display = "block";
-
-
 
         clicElement.addEventListener ("click", function(){
-            for (var k = grid.length-1; k > 0; k--) {
-                if(grid[k][this.id]==""){
-                    caseElement.className ="red";
+            while (grid[i][j] == "") {
+                i = grid.length-1;
+                if () {
+                    grid[i][j] = "Y";
+                    caseElement.className = "yellow";
+                } else {
+                    i--;
                 }
+
+
+
+                                // if(grid[i][this.id]==""){
+                //     caseElement.className ="red";
+
+            //
+            // for (var k = grid.length-1; k > 0; k--) {
+            //     }
 
                 // if(grid[i][j] == "R") {
                 //     caseElement.className ="red";
