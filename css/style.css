@@ -16,14 +16,14 @@ body{
     border-radius: 0;
 }
 .case{
-    border: 2px solid blue;
+    border: 1px solid blue;
     background-color: white;
     border-radius: 50%;
     width: 5em;
     height: 5em;
 }
 .truc{
-    border: 2px solid blue;
+    border: 1px solid blue;
     background-color: lightgrey;
     border-radius: 50%;
     width: 5em;
@@ -33,14 +33,14 @@ table {
     border: 2px solid black;
 }
 .red {
-    /*border: 2px solid blue;*/
+    border: 1px solid blue;
     background-color: red;
     border-radius: 50%;
     width: 5em;
     height: 5em;
 }
 .yellow {
-    /*border: 2px solid blue;*/
+    border: 2px solid yellow;
     background-color: yellow;
     border-radius: 50%;
     width: 5em;
