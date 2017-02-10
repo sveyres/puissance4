@@ -6,6 +6,7 @@ var grid = [["","","","","","",""],
             ["","","","","","",""],
             ["","","","","","",""],
             ["","","","","","",""]];
+var nbTours = 0;
 
 for (var j = 0; j < 7; j++) {
 // LES COLONNES
@@ -18,6 +19,7 @@ for (var j = 0; j < 7; j++) {
     columnElement.appendChild(clicElement);
 
     clicElement.addEventListener ("click", function(){
+        nbTours++;
         var col = this.id;
         var lig = 5;
         console.log(lig+"-"+col);
@@ -25,37 +27,22 @@ for (var j = 0; j < 7; j++) {
             lig = lig - 1;
         }
         var laCase = document.getElementById("case"+lig+"-"+col)
-        laCase.className = "red";
-        grid[lig][col]="R";
-
+        // l = parseFloat(k);
+            if(nbTours%2 === 0){
+                // console.log(l);
+                laCase.className = "yellow";
+                grid[lig][col]="Y";
+            }else{
+                laCase.className = "red";
+                grid[lig][col]="R";
+            }
     });
-    clicElement.addEventListener ("click", function(){
-        var col = this.id;
-        var lig = 5;
-        console.log(lig+"-"+col);
-        while (grid[lig][col]!=="") {
-            lig = lig - 1;
-        }
-        var laCase = document.getElementById("case"+lig+"-"+col)
-        laCase.className = "yellow";
-        grid[lig][col]="Y";
-
-    });
-
     for (var i = 0; i < 6; i++) {
 // LES LIGNES
         var caseElement = document.createElement("div");
         caseElement.className = "case";
         caseElement.id = "case"+i+"-"+j;
         columnElement.appendChild(caseElement);
-
-        //
-        // if(grid[i][j]=="Y"){
-        //     caseElement.className = "yellow";
-        // }else if (grid[i][j]=="R") {
-        //     caseElement.className = "red";
-        //
-        // }
     }
 }
 
