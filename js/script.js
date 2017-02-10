@@ -23,6 +23,7 @@ for (var j = 0; j < 7; j++) {
 // LES LIGNES
         var caseElement = document.createElement("div");
         caseElement.className = "case";
+        caseElement.id = "case"+i+"-"+j;
         columnElement.appendChild(caseElement);
         // caseElement.style.display = "block";
 
